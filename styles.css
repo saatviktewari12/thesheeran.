@@ -1,0 +1,274 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('img3.jpg') center/cover;
+    color: #333;
+    height: 100vh;
+    /* overflow: hidden; */
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+    position: relative; /* Ensures header is above background */
+    z-index: 1;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.hero {
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 100px 20px;
+    min-height: 100vh; /* Ensure hero section takes full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h2 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+}
+
+.cta-button {
+    background-color: #e74c3c;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.menu {
+    background: rgba(71, 70, 70, 0.7); /* Semi-transparent overlay */
+    color: rgb(255, 255, 255);
+    padding: 40px 20px;
+    min-height: 600px;
+}
+
+.menu-container {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.menu-item {
+    flex: 0 0 auto;
+    width: 300px;
+    margin: 10px;
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: left;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+.menu-description {
+    padding: 20px;
+}
+
+.menu-description h3 {
+    margin: 0;
+}
+
+.price {
+    font-size: 1.2em;
+    color: #e74c3c;
+}
+
+.gallery {
+    padding: 40px 20px;
+    text-align: center;
+    color: rgb(228, 222, 211);
+}
+
+.gallery-images {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: transparent;
+}
+
+.gallery-images img {
+    width: 200px;
+    height: auto;
+    margin: 10px;
+}
+
+.about, .contact {
+    padding: 40px 20px;
+    text-align: center;
+    color: rgb(250, 250, 250);
+}
+/* Modal/Lightbox Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+}
+
+.modal-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.mySlides {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+}
+
+.column {
+    float: left;
+    width: 20%;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Hide the modal when clicked outside */
+.modal {
+    animation: fadeIn 0.4s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly transparent background */
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
